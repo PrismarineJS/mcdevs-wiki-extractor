@@ -6,4 +6,10 @@ var protocolFilePath=process.argv[2];
 
 var writeProtocol=require("./").writeProtocol;
 
-writeProtocol(protocolFilePath);
+writeProtocol(protocolFilePath,function(err){
+  if(err) {
+    console.log(err.stack);
+    return;
+  }
+  console.log("Protocol extracted !");
+});
