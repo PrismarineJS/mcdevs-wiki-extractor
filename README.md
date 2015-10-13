@@ -5,3 +5,8 @@
 
 Extract structured data from the mcdevs wiki
 
+## History
+
+### 0.0.0
+
+* first commit, imported from minecraft-data
