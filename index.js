@@ -1,1 +1,1 @@
-module.exports=require("./protocol_extractor");
+module.exports=require("./lib/protocol_extractor");

@@ -4,6 +4,6 @@ if(process.argv.length !=3) {
 }
 var protocolFilePath=process.argv[2];
 
-var writeProtocol=require("./protocol_extractor").writeProtocol;
+var writeProtocol=require("./").writeProtocol;
 
 writeProtocol(protocolFilePath);
