@@ -4,7 +4,7 @@ if(process.argv.length !=3) {
 }
 var protocolFilePath=process.argv[2];
 
-var writeProtocol=require("./").writeProtocol;
+var writeProtocol=require("../").writeProtocol;
 
 writeProtocol(protocolFilePath,function(err){
   if(err) {
