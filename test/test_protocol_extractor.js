@@ -1,7 +1,7 @@
 // items tests
 
 var assert = require("assert");
-var protocol_extractor = require("../");
+var protocol_extractor = require("../").protocol_extractor;
 
 describe("protocol_extractor",function(){
   it("parse a simple packet correctly",function(){
