@@ -7,6 +7,10 @@ Extract structured data from the mcdevs wiki
 
 ## History
 
+### 0.1.0
+
+* improvement of the protocol extractor, add an entities extractor
+
 ### 0.0.0
 
 * first commit, imported from minecraft-data
