@@ -7,6 +7,11 @@ Extract structured data from the mcdevs wiki
 
 ## History
 
+### 0.2.0
+
+* add protocol comments extractor (@roblabla)
+* adapt entities extractor
+
 ### 0.1.1
 
 * fix table parsing : was forgetting the last line
