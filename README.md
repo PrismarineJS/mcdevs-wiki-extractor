@@ -5,6 +5,8 @@
 
 Extract structured data from the mcdevs wiki
 
+Requires pandoc to be installed !
+
 ## History
 
 ### 0.2.0
