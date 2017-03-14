@@ -10,10 +10,10 @@
     "async": "^2.0.0-rc.4",
     "pandoc-filter": "^0.1.6",
     "pdc": "^0.2.2",
-    "ramda": "^0.21.0"
+    "ramda": "^0.23.0"
   },
   "devDependencies": {
-    "mocha": "~2.2.5"
+    "mocha": "~3.2.0"
   },
   "repository": {
     "type": "git",
