@@ -7,13 +7,14 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "async": "^2.0.0-rc.4",
-    "pandoc-filter": "^0.1.6",
-    "pdc": "^0.2.2",
-    "ramda": "^0.21.0"
+    "async": "^2.6.1",
+    "pandoc-filter": "^1.0.0",
+    "pdc": "^0.2.3",
+    "ramda": "^0.25.0",
+    "parse-wikitext": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "~2.2.5"
+    "mocha": "^5.2.0"
   },
   "repository": {
     "type": "git",
