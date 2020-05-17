@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "async": "^2.6.1",
-    "pandoc-filter": "^1.0.0",
+    "pandoc-filter": "^2.0.0",
     "pdc": "^0.2.3",
     "ramda": "^0.25.0",
     "parse-wikitext": "^1.0.0"
