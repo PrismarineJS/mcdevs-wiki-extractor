@@ -2,12 +2,12 @@
 
 // items tests
 
-var assert = require('assert')
-var protocolExtractor = require('../').protocol_extractor
+const assert = require('assert')
+const protocolExtractor = require('../').protocol_extractor
 
 describe('protocol_extractor', function () {
   it('parse a simple packet correctly', function () {
-    var testTable = '{| class="wikitable"\n' +
+    const testTable = '{| class="wikitable"\n' +
       ' ! Packet ID\n' +
       ' ! State\n' +
       ' ! Bound To\n' +
@@ -27,7 +27,7 @@ describe('protocol_extractor', function () {
       ' | \n' +
       ' |}'
 
-    var expectedTable = [
+    const expectedTable = [
       {
         'Packet ID': '0x0D',
         State: 'Play',
@@ -46,7 +46,7 @@ describe('protocol_extractor', function () {
       }
     ]
 
-    var expectedPacket = {
+    const expectedPacket = {
       id: '0x0D',
       fields: [
         {
@@ -60,10 +60,10 @@ describe('protocol_extractor', function () {
       ]
     }
 
-    var actualTable = protocolExtractor.parseWikiTable(testTable.split('\n'))
+    const actualTable = protocolExtractor.parseWikiTable(testTable.split('\n'))
     // console.log(actualTable);
 
-    var actualPacket = protocolExtractor.tableToPacket(actualTable)
+    const actualPacket = protocolExtractor.tableToPacket(actualTable)
 
     // console.log(actualPacket);
 
@@ -73,7 +73,7 @@ describe('protocol_extractor', function () {
   })
 
   it('parse a more complicated packet', function () {
-    var testTable2 = '{| class="wikitable"\n' +
+    const testTable2 = '{| class="wikitable"\n' +
       ' ! Packet ID\n' +
       ' ! State\n' +
       ' ! Bound To\n' +
@@ -102,7 +102,7 @@ describe('protocol_extractor', function () {
   })
 
   it('parse a packet with colspan', function () {
-    var testTable3 = '{| class="wikitable"\n' +
+    const testTable3 = '{| class="wikitable"\n' +
       ' ! Packet ID\n' +
       ' ! State\n' +
       ' ! Bound To\n' +
@@ -148,7 +148,7 @@ describe('protocol_extractor', function () {
   })
 
   it('parse a packet with rowspan', function () {
-    var testTable4 = '{| class="wikitable"\n' +
+    const testTable4 = '{| class="wikitable"\n' +
       ' ! Packet ID\n' +
       ' ! State\n' +
       ' ! Bound To\n' +
@@ -162,7 +162,7 @@ describe('protocol_extractor', function () {
       " |colspan=\"3\"| ''no fields''\n" +
       ' |}\n'
 
-    var expectedTable4 = [
+    const expectedTable4 = [
       {
         'Packet ID': '0x00',
         State: 'Status',
@@ -175,10 +175,10 @@ describe('protocol_extractor', function () {
 
     // need to handle colspan
 
-    var lines4 = testTable4.split('\n')
+    const lines4 = testTable4.split('\n')
     // console.log(JSON.stringify(protocol_extractor.tableToRows(lines4),null,2));
 
-    var actualTable4 = protocolExtractor.parseWikiTable(lines4)
+    const actualTable4 = protocolExtractor.parseWikiTable(lines4)
 
     // console.log(JSON.stringify(expectedTable4,null,2));
     // console.log(JSON.stringify(actualTable4,null,2));
@@ -191,7 +191,7 @@ describe('protocol_extractor', function () {
   })
 
   it('parse a packet with more rowspan', function () {
-    var testTable5 = '{| class="wikitable"\n' +
+    const testTable5 = '{| class="wikitable"\n' +
       ' |-\n' +
       ' ! Packet ID\n' +
       ' ! State\n' +
